@@ -1,6 +1,7 @@
 package com.carts.CartsService.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +18,8 @@ public class CartsController {
 	}	
 	
 	@GetMapping("/{id}")
-	public String getControllerById() { 
-		return cartservice.getCartById();		
+	public String getControllerById(@PathVariable("id") Long id) { 
+		return cartservice.getCartById(id);		
 	}
 	
 }
