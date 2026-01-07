@@ -3,6 +3,8 @@ package com.carts.CartsService.services;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.carts.CartsService.dtos.FakeStoreCartDto;
+
 @Service
 public class FakeStoreCartsService implements CartsService{
 	
@@ -14,7 +16,8 @@ public class FakeStoreCartsService implements CartsService{
 	
 	@Override
 	public String getCartById(long id) {
-		// TODO Auto-generated method stub
+		restTemplate.getForObject("https://fakestoreapi.com/carts/"+id, FakeStoreCartDto.class);
+		
 		return "FakeStoreCartsService is called"+id;
 	}
 
