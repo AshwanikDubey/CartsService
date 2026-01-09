@@ -28,8 +28,5 @@ public class Carts {
 	}
 	public void setProduct(Product product) {
 		this.product = product;
-	}
-	
-	
-	
+	} 
 }

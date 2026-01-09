@@ -1,6 +1,7 @@
 package com.carts.CartsService.services;
 
- 
+import com.carts.CartsService.models.Carts;
+
 public interface CartsService {
-	public String getCartById(long id);
+	public Carts getCartById(long id);
 }
