@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.carts.CartsService.models.Carts;
 import com.carts.CartsService.services.CartsService;
 
 @RestController
@@ -18,7 +19,7 @@ public class CartsController {
 	}	
 	
 	@GetMapping("/{id}")
-	public String getControllerById(@PathVariable("id") Long id) { 
+	public Carts getControllerById(@PathVariable("id") Long id) {  
 		return cartservice.getCartById(id);		
 	}
 	
